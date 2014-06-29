@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo: Animated Scroll to Top Tutorial by Stanislav Kostadinov</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+</script>
+
+<style>
+
+/*
+Back to Top Button Tutorial by Stanislav Kostadinov
+*/
+body {font-family: arial;}
+a {text-decoration: none;}
+h2 {font-size: 20px;}
+#back-top {
+	position: fixed;
+	bottom: 0px;
+	right: 20px;
+}
+#back-top a {
+	width: 40px;
+	display: block;
+	color: #bbb;
+	/* background color transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+/* arrow icon */
+#back-top span {
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin-bottom: 7px;
+	background: #26456e  url(up-arrow.png) no-repeat center center;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #00bfab;
+}
+</style>
+
+</head>
+
+<body id="top">
+	<div>
+		<h1>Demo: Scroll to Top Button Tutorial</h1>
+		<h2>Back to <a href="http://stanislav.it/animated-scroll-to-top-button-tutorial/">Animated Scroll to Top Button Article</a></h2>
+		<p class="credits"><em>by <a href="http://stanislav.it">Stanislav Kostadinov</a></em></p>
+		<p>&darr; scroll down</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+		<p>&darr;</p>
+	</div>
+	<p id="back-top">
+		<a href="#top"><span></span></a>
+	</p>
+</body>
+</html>
